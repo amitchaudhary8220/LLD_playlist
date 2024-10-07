@@ -70,21 +70,21 @@ class Invoice {
 }
 
 
-class Invoice {
-    //since Invoice class has object of Marker class, it is has-a relation
-    private  Marker marker;
-    private  int quantity;
-    public  Invoice(Marker marker, int quantity ){
-        this.marker = marker;
-        this.quantity = quantity;
-    }
-
-    public int calculateTotal(){
-        int price = ((this.marker.price) * this.quantity);
-        return price;
-    }
-
-}
+//class Invoice {
+//    //since Invoice class has object of Marker class, it is has-a relation
+//    private  Marker marker;
+//    private  int quantity;
+//    public  Invoice(Marker marker, int quantity ){
+//        this.marker = marker;
+//        this.quantity = quantity;
+//    }
+//
+//    public int calculateTotal(){
+//        int price = ((this.marker.price) * this.quantity);
+//        return price;
+//    }
+//
+//}
 
 
 //class InvoiceDao {
@@ -138,15 +138,14 @@ class InvoicePrinter{
 //        // save the invoice in the file with given name
 //    }
 //
-//    // since the InvoiceDao class was already tested an it was running on production , adding few more
-//    // feature can leads to bugs ,and it is not following the open/closed principle, which suggests that
+//    // since the InvoiceDao class was already tested and it was running on production , adding few more
+//    // feature can lead to bugs ,and it is not following the open/closed principle, which suggests that
 //    // class should be open for extension but closed for modification , and here we are modifying the class
 //}
 
 
 
 // better way could be
-
 interface  InvoiceDao{
     public  void save(Invoice invoice);
 }
